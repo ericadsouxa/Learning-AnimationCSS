@@ -1,0 +1,308 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+.spin-text {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+    animation: spin 6s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.left-in-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28A745;
+    opacity: 0;
+    animation: leftIn 4s forwards;
+}
+
+@keyframes leftIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.right-in-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #DC3545;
+    opacity: 0;
+    animation: rightIn 4s forwards;
+}
+
+@keyframes rightIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left-exit-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFC107;
+    opacity: 1;
+    animation: leftExit 4s forwards;
+}
+
+@keyframes leftExit {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.right-exit-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6F42C1;
+    opacity: 1;
+    animation: rightExit 4s forwards;
+}
+
+@keyframes rightExit {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+
+h1 {
+    color: #333;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items : flex-start;
+}
+
+.animation-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.animation-card div {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+p {
+    margin-top: 15px;
+}
+
+
+.transition-box {
+    width: 100px;
+    height: 100px;
+    background-color: #007BFF;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.transition-box:hover {
+    background-color: #FF5733;
+    transform: scale(1.2);
+}
+
+.keyframes-box {
+    width: 100px;
+    height: 100px;
+    background-color: #28A745;
+    margin: 0 auto;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background-color: #FFC107;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+
+.transform-box:hover {
+    transform: rotate(45deg);
+}
+
+
+.hover-box {
+    width: 100px;
+    height: 100px;
+    background-color: #DC3545;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.hover-box:hover {
+    background-color: #6F42C1;
+    transform: scale(1.3);
+}
+
+
+.text-box {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+    animation: text-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF;
+    }
+    to {
+        text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF;
+    }
+}
+
+/* Background Animation */
+.background-box {
+    width: 100px;
+    height: 100px;
+    background-color: #343A40;
+    margin: 0 auto;
+    animation: bg-color-change 3s infinite alternate;
+}
+
+@keyframes bg-color-change {
+    from {
+        background-color: #343A40;
+    }
+    to {
+        background-color: #17A2B8;
+    }
+}
+
+
+/* Shake Animation */
+.shake-box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    transition: all 0.3s ease-in-out;
+}
+
+.shake-box:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+
+        0%, 100% { transform: translateX(0); }
+        25%, 75% { transform: translateX(-3px); }
+        50% { transform: translateX(3px); }
+    
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Flip Animation */
+.flip-box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    transition: transform 0.6s;
+}
+
+.flip-box:hover {
+    transform: rotateY(180deg);
+}
+
+/* Fade Animation */
+.fade-box {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    animation: fade 3s infinite;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Zoom In Animation */
+.zoom-in-box {
+    background-color: pink;
+    transition: transform 0.5s ease-in-out;
+}
+
+.zoom-in-box:hover {
+    transform: scale(1.5);
+}
+
+/* Zoom Out Animation */
+.zoom-out-box {
+    background-color: lightgray;
+    transition: transform 0.5s ease-in-out;
+}
+
+.zoom-out-box:hover {
+    transform: scale(0.5);
+}
